@@ -16,9 +16,9 @@ public class JdbcExampleApplication {
 
 		Student s = context.getBean(Student.class);
 		s.setRollNo(1);
-		s.setMarks(10);
 		s.setName("ABC");
-
+		s.setMarks(10);
+		System.out.println(">>> Check s: " + s.toString());
 		StudentService service = context.getBean(StudentService.class);
 		service.addStudent(s);
 
